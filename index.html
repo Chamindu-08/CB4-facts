@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #fact {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Facts Generator</h1>
+    <div id="fact">Click the button to see a random fact!</div>
+    <button onclick="displayRandomFact()">Get Random Fact</button>
+
+    <script>
+        const facts = [
+            "The CB4 bike features a lightweight aluminum frame.",
+            "It is equipped with a 21-speed gear system for versatile riding.",
+            "The bike has a front suspension fork for improved comfort on rough terrain.",
+            "CB4 bikes come with disc brakes for enhanced stopping power.",
+            "The bike is designed for both urban commuting and off-road adventures.",
+            "It features ergonomic handlebars for better grip and control.",
+            "The CB4 bike is available in multiple colors.",
+            "It includes reflectors for increased visibility at night.",
+            "The bike is compatible with various accessories like racks and fenders.",
+            "CB4 bikes are known for their durability and long-lasting performance."
+        ];
+
+        function displayRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
